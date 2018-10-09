@@ -1,0 +1,49 @@
+
+/* ------------------------global-------------------------------------- */
+
+body { background-image: url(https://www.imgonline.com.ua/examples/rays-of-light-in-the-sky.jpg);
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center center; 
+      text-shadow: #1b1be7e1;
+      font-weight: normal;
+}
+
+/* --------------------------layout page ------------------------------------------------ */
+
+#main-panel-1 { border: 5px double lightblue;
+}
+
+.col-md-6 img { float: left; 
+    margin: 20px;
+}
+
+#main-panel-2 { border: 5px double lightblue;
+                margin-left: 20px;
+}
+
+ /* 4 images  */
+#image-4 { margin: 10px;
+            border: grey 3px solid;
+}
+
+/* --------------------------  comparison page ------------------------------------------------ */
+#comparision-image { margin: 20px;
+                     height: 200px;
+                     width: 300px;
+}
+
+/* --------------------------  visuals page ------------------------------------------------ */
+
+.img-vis { 
+    margin: 20px;
+    padding-left: 30px;
+    width: 70%;
+}
+
+.clear {
+    clear: left;
+}
