@@ -3,7 +3,6 @@ import csv
 # Using a function that retuns a callable value (found this in google search for sorting)
 from operator import itemgetter
 # Files to Load
-#file_to_load = "/Users/VINESH/Desktop/election_data.csv"
 file_to_load = "/Users/VINESH/Desktop/GitLab/nu-class-homework/HW3/election_data.csv"
 file_to_output = "/Users/VINESH/Desktop/GitLab/nu-class-homework/HW3/PyPoll.txt"
 
