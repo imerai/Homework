@@ -93,6 +93,13 @@ def samples(sample):
         "otu_labels": sample_data.otu_label.tolist(),
     }
     return jsonify(data)
+# Break this out to separate the data
+# 127.0.0.1 - - [01/Nov/2018 17:44:54] "GET / HTTP/1.1" 200 -
+# 127.0.0.1 - - [01/Nov/2018 17:44:56] "GET /favicon.ico HTTP/1.1" 404 -
+# 127.0.0.1 - - [01/Nov/2018 17:44:56] "GET /names HTTP/1.1" 200 -
+# 127.0.0.1 - - [01/Nov/2018 17:44:56] "GET /metadata/940 HTTP/1.1" 200 -
+# 127.0.0.1 - - [01/Nov/2018 17:44:57] "GET /samples/940 HTTP/1.1" 200 -
+# 127.0.0.1 - - [01/Nov/2018 17:44:57] "GET /wfreq/940 HTTP/1.1" 200 -
 
 @app.route("/wfreq/<sample>")
 def washing(sample):
@@ -102,12 +109,11 @@ def washing(sample):
     results = db.session.query(*sel).filter(Samples_Metadata.sample == sample).all()
 
     # Create a dictionary entry for each row of metadata information
-    sample_metadata = {}
+    data = {}
     for result in results:
-        sample_metadata["WFREQ"] = result[0]
-    print(sample_metadata)
-    return jsonify(sample_metadata)
-
+        data["WFREQ"] = result[0]
+    # print(sample_metadata)
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run()
